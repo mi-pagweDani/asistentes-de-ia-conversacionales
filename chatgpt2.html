@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre ChatGPT: características, rendimiento, testimonios y más.">
+  <meta name="keywords" content="ChatGPT, IA, inteligencia artificial, chatbot, OpenAI">
+  <meta name="author" content="Tu Nombre">
+  <title>ChatGPT - Detalles y Rendimiento</title>
+  <link rel="stylesheet" href="chatgpt2.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <nav class="nav">
+    <a href="chatgpt3.html" class="nav__logo" aria-label="Regresar a la página principal">AI Prompts</a>
+    <ul class="nav__list">
+    <li><a href="index.html" class="nav__link">Inicio</a></li>
+    <li><a href="https://chat.openai.com/" class="nav__link" target="_blank" rel="noopener">ChatGPT Oficial</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__content">
+    <h1 class="hero__title">ChatGPT</h1>
+    <p class="hero__description">El asistente conversacional más avanzado, capaz de comprender y generar texto natural en múltiples idiomas. Potencia tu productividad y creatividad con IA.</p>
+    <a href="https://chat.openai.com/" class="btn btn--primary" target="_blank" rel="noopener">Probar ChatGPT</a>
+    </div>
+  </section>
+
+  <!-- Galería de Imágenes -->
+  <section class="gallery">
+    <h2 class="section-title">Galería de ChatGPT</h2>
+    <div class="gallery__grid">
+    <img src="chatgpt1.1.jpg" alt="Interfaz de inteligencia artificial" loading="lazy" class="gallery__img">
+    <img src="chatgpt1.2.webp" alt="Tecnología de chat" loading="lazy" class="gallery__img">
+    <img src="chatgpt1.3.jpg" alt="Conversación con IA" loading="lazy" class="gallery__img">
+    </div>
+  </section>
+
+  <!-- Video Embebido -->
+  <section class="video-section">
+    <h2 class="section-title">¿Cómo funciona ChatGPT?</h2>
+    <div class="video-container">
+    <iframe width="1017" height="572" src="https://www.youtube.com/embed/EFSIZHr3hVo" title="Cómo funciona la INTELIGENCIA ARTIFICIAL generativa 🤯 Cómo funciona ChatGPT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="video-description">Descubre cómo ChatGPT utiliza modelos de lenguaje avanzados para interactuar de manera natural y eficiente.</p>
+  </section>
+
+  <!-- Gráfica de Rendimiento -->
+  <section class="performance">
+    <h2 class="section-title">Comparativa de Rendimiento IA Generativa</h2>
+    <div class="performance__legend">
+    <span><span class="legend-dot legend-dot--chatgpt"></span>ChatGPT</span>
+    <span><span class="legend-dot legend-dot--claude"></span>Claude</span>
+    <span><span class="legend-dot legend-dot--deepseek"></span>DeepSeek</span>
+    </div>
+    <canvas id="performanceChart" width="600" height="320" aria-label="Gráfica comparativa de rendimiento de IA"></canvas>
+    <div class="performance__metrics">
+    <p><strong>Precisión:</strong> Porcentaje de respuestas correctas en benchmarks públicos.</p>
+    <p><strong>Velocidad:</strong> Tiempo promedio de respuesta (menor es mejor).</p>
+    <p><strong>Satisfacción:</strong> Valoración de usuarios (escala 1-10).</p>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials">
+    <h2 class="section-title">Testimonios de Usuarios</h2>
+    <div class="testimonials__list">
+    <div class="testimonial">
+    <img src="Danna.webp" alt="Avatar de usuario 1" class="testimonial__avatar" loading="lazy">
+    <blockquote class="testimonial__text">"ChatGPT ha revolucionado la forma en que trabajo y aprendo. ¡Impresionante!"</blockquote>
+    <cite class="testimonial__author">Danna.</cite>
+    </div>
+    <div class="testimonial">
+    <img src="Mariana.webp" alt="Avatar de usuario 2" class="testimonial__avatar" loading="lazy">
+    <blockquote class="testimonial__text">"La precisión y rapidez de ChatGPT es inigualable. Lo uso todos los días."</blockquote>
+    <cite class="testimonial__author">LMariana G.</cite>
+    </div>
+    <div class="testimonial">
+    <img src="Mauror.webp" alt="Avatar de usuario 3" class="testimonial__avatar" loading="lazy">
+    <blockquote class="testimonial__text">"Ideal para resolver dudas y generar ideas creativas en segundos."</blockquote>
+    <cite class="testimonial__author">Mauror R.</cite>
+    </div>
+    </div>
+  </section>
+
+  <!-- Enlace prominente -->
+  <section class="cta-section">
+    <a href="https://chat.openai.com/" class="btn btn--secondary" target="_blank" rel="noopener">Ir a ChatGPT Oficial</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 @Daniela. Todos los derechos reservados.</p>
+    <a href="Daniela.html" class="footer__back" aria-label="Regresar a la página principal">Volver al inicio</a>
+  </footer>
+
+  <!-- Chart.js CDN - Solo una vez -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Gráfica de rendimiento - Versión consolidada y mejorada
+    const ctx = document.getElementById('performanceChart').getContext('2d');
+    new Chart(ctx, {
+    type: 'line',
+    data: {
+    labels: ['2022', '2023', '2024'],
+    datasets: [
+    {
+    label: 'ChatGPT - Precisión (%)',
+    data: [85, 92, 97],
+    borderColor: '#3498db',
+    backgroundColor: 'rgba(52,152,219,0.08)',
+    tension: 0.4,
+    pointBackgroundColor: '#3498db',
+    yAxisID: 'y',
+    },
+    {
+    label: 'Claude - Precisión (%)',
+    data: [80, 88, 94],
+    borderColor: '#e67e22',
+    backgroundColor: 'rgba(230,126,34,0.08)',
+    tension: 0.4,
+    pointBackgroundColor: '#e67e22',
+    yAxisID: 'y',
+    },
+    {
+    label: 'DeepSeek - Precisión (%)',
+    data: [78, 86, 91],
+    borderColor: '#27ae60',
+    backgroundColor: 'rgba(39,174,96,0.08)',
+    tension: 0.4,
+    pointBackgroundColor: '#27ae60',
+    yAxisID: 'y',
+    },
+    {
+    label: 'ChatGPT - Velocidad (s)',
+    data: [2.1, 1.7, 1.3],
+    borderDash: [5,5],
+    borderColor: '#3498db',
+    backgroundColor: 'rgba(52,152,219,0.02)',
+    tension: 0.4,
+    pointBackgroundColor: '#3498db',
+    yAxisID: 'y1',
+    },
+    {
+    label: 'Claude - Velocidad (s)',
+    data: [2.4, 1.9, 1.5],
+    borderDash: [5,5],
+    borderColor: '#e67e22',
+    backgroundColor: 'rgba(230,126,34,0.02)',
+    tension: 0.4,
+    pointBackgroundColor: '#e67e22',
+    yAxisID: 'y1',
+    },
+    {
+    label: 'DeepSeek - Velocidad (s)',
+    data: [2.6, 2.0, 1.6],
+    borderDash: [5,5],
+    borderColor: '#27ae60',
+    backgroundColor: 'rgba(39,174,96,0.02)',
+    tension: 0.4,
+    pointBackgroundColor: '#27ae60',
+    yAxisID: 'y1',
+    },
+    {
+    label: 'ChatGPT - Satisfacción',
+    data: [8.2, 8.8, 9.3],
+    borderDash: [2,2],
+    borderColor: '#3498db',
+    backgroundColor: 'rgba(52,152,219,0.01)',
+    tension: 0.4,
+    pointBackgroundColor: '#3498db',
+    yAxisID: 'y2',
+    },
+    {
+    label: 'Claude - Satisfacción',
+    data: [7.8, 8.3, 8.9],
+    borderDash: [2,2],
+    borderColor: '#e67e22',
+    backgroundColor: 'rgba(230,126,34,0.01)',
+    tension: 0.4,
+    pointBackgroundColor: '#e67e22',
+    yAxisID: 'y2',
+    },
+    {
+    label: 'DeepSeek - Satisfacción',
+    data: [7.5, 8.0, 8.5],
+    borderDash: [2,2],
+    borderColor: '#27ae60',
+    backgroundColor: 'rgba(39,174,96,0.01)',
+    tension: 0.4,
+    pointBackgroundColor: '#27ae60',
+    yAxisID: 'y2',
+    }
+    ]
+    },
+    options: {
+    responsive: true,
+    interaction: {
+    mode: 'index',
+    intersect: false,
+    },
+    plugins: {
+    legend: { display: true, position: 'bottom' },
+    tooltip: { enabled: true }
+    },
+    scales: {
+    y: {
+    type: 'linear',
+    display: true,
+    position: 'left',
+    title: { display: true, text: 'Precisión (%)' },
+    min: 70,
+    max: 100,
+    grid: { drawOnChartArea: true }
+    },
+    y1: {
+    type: 'linear',
+    display: true,
+    position: 'right',
+    title: { display: true, text: 'Velocidad (s)' },
+    min: 1,
+    max: 3,
+    grid: { drawOnChartArea: false }
+    },
+    y2: {
+    type: 'linear',
+    display: false,
+    position: 'right',
+    min: 7,
+    max: 10
+    }
+    }
+    }
+    });
+  </script>
+  
+  <!-- Script para el confeti multicolor -->
+  <script>
+    // Función para crear confeti multicolor
+    function createSnowflakes() {
+      const snowContainer = document.createElement('div');
+      snowContainer.className = 'snow-container';
+      
+      // Agregar al header
+      const header = document.querySelector('.main-header');
+      header.style.position = 'relative';
+      header.appendChild(snowContainer.cloneNode(true));
+      
+      // Agregar a la sección hero
+      const hero = document.querySelector('.hero');
+      hero.style.position = 'relative';
+      hero.appendChild(snowContainer.cloneNode(true));
+      
+      // Colores del arcoíris
+      const colors = [
+        '#FF0000', // Rojo
+        '#FF7F00', // Naranja
+        '#FFFF00', // Amarillo
+        '#00FF00', // Verde
+        '#0000FF', // Azul
+        '#4B0082', // Índigo
+        '#9400D3', // Violeta
+        '#FF1493', // Rosa
+        '#00FFFF', // Cian
+        '#FFD700'  // Dorado
+      ];
+      
+     
+      
+      // Crear confeti en cada contenedor
+      const containers = document.querySelectorAll('.snow-container');
+      containers.forEach(container => {
+        const containerHeight = container.clientHeight;
+        const containerWidth = container.clientWidth;
+        
+        // Crear entre 40-60 piezas de confeti por contenedor
+        const confettiCount = Math.floor(Math.random() * 20) + 40;
+        
+        for (let i = 0; i < confettiCount; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'snowflake';
+          
+          // Elegir forma aleatoria o usar un cuadrado/círculo
+          const useShape = Math.random() > 0.5;
+          
+          if (useShape) {
+            // Usar un símbolo como forma
+            const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+            confetti.innerHTML = randomShape;
+            confetti.style.fontSize = `${(Math.random() * 1) + 0.5}em`;
+            confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+          } else {
+            // Usar un div con color de fondo como forma
+            const size = (Math.random() * 8) + 4; // Tamaño entre 4px y 12px
+            confetti.style.width = `${size}px`;
+            confetti.style.height = `${size}px`;
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            // Forma aleatoria (círculo o cuadrado)
+            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+          }
+          
+          // Posición aleatoria
+          confetti.style.left = `${Math.random() * 100}%`;
+          
+          // Opacidad aleatoria
+          confetti.style.opacity = (Math.random() * 0.7) + 0.3;
+          
+          // Duración aleatoria de la animación (entre 2 y 6 segundos)
+          const animationDuration = (Math.random() * 4) + 2;
+          confetti.style.animationDuration = `${animationDuration}s`;
+          
+          // Retraso aleatorio
+          confetti.style.animationDelay = `${Math.random() * 3}s`;
+          
+          // Rotación inicial aleatoria
+          const initialRotation = Math.floor(Math.random() * 360);
+          confetti.style.transform = `rotate(${initialRotation}deg)`;
+          
+          container.appendChild(confetti);
+        }
+      });
+    }
+
+    // Ejecutar cuando el DOM esté cargado
+    document.addEventListener('DOMContentLoaded', createSnowflakes);
+  </script>
+</body>
+</html>

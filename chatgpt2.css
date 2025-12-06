@@ -1,0 +1,288 @@
+/* Estilo básico para toda la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #D5006D; /* Fondo rosa oscuro */
+  color: #fff;  /* Texto blanco para que resalte sobre el fondo oscuro */
+  line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+  background-color: #333;
+  padding: 10px 0;
+  position: relative;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav__logo {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+  background: url('path_to_image.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero__description {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn--primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #2980b9;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.gallery__img:hover {
+  transform: scale(1.05);
+}
+
+/* Video Section */
+.video-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.video-container {
+  margin-bottom: 20px;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  padding-top: 56.25%; /* Mantener proporción de aspecto 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-description {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Performance Section */
+.performance {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.performance__legend {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.legend-dot--chatgpt {
+  background-color: #3498db;
+}
+
+.legend-dot--claude {
+  background-color: #e67e22;
+}
+
+.legend-dot--deepseek {
+  background-color: #27ae60;
+}
+
+.performance__metrics {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonials__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+.testimonial__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial__text {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial__author {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Call to Action Section */
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #3498db;
+}
+
+.cta-section .btn--secondary {
+  background-color: #fff;
+  color: #3498db;
+}
+
+.cta-section .btn--secondary:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Footer */
+.main-footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer__back {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer__back:hover {
+  color: #3498db;
+}
+
+/* Snowflakes (Confeti) */
+.snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform-origin: center;
+  animation: snow 4s infinite;
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}

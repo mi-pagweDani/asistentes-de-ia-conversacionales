@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudia con Gemini</title>
+  <style>
+    /* ===== ESTILOS GENERALES ===== */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(120deg, #ff758f, #c96ccd, #8a5ebd, #5a4aa7);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease-in-out infinite;
+    }
+    @keyframes gradientBG {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ===== CONTENEDOR PRINCIPAL ===== */
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 60px auto;
+      background: rgba(255, 248, 252, 0.92);
+      color: #333;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(90, 74, 167, 0.25);
+      padding: 40px 32px;
+      backdrop-filter: blur(6px);
+      box-sizing: border-box;
+      border: 1px solid rgba(201, 108, 205, 0.2);
+    }
+
+    /* ===== TÍTULOS ===== */
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5em;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(138, 94, 189, 0.2);
+      color: #5a4aa7;
+    }
+
+    h2 {
+      color: #c96ccd;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(to right, #ff758f, #c96ccd);
+      margin-top: 6px;
+      border-radius: 2px;
+    }
+
+    /* ===== TEXTO ===== */
+    p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 1.5em;
+      font-size: 1.08rem;
+      color: #555;
+    }
+
+    /* ===== LOGO ===== */
+    .logo {
+      width: 60px;
+      margin-bottom: 1.5em;
+      filter: drop-shadow(0 2px 8px rgba(201, 108, 205, 0.4));
+    }
+
+    /* ===== FILA DE IMÁGENES ===== */
+    .img-row {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin: 2em 0 1.5em;
+      flex-wrap: wrap;
+    }
+
+    .img-row img {
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(138, 94, 189, 0.25);
+      width: 210px;
+      height: 140px;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .img-row img:hover {
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 6px 20px rgba(255, 117, 143, 0.4);
+    }
+
+    /* ===== VIDEO ===== */
+    .video-container {
+      margin: 2em 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-container iframe {
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(138, 94, 189, 0.3);
+      width: 100%;
+      max-width: 480px;
+      height: 270px;
+    }
+
+    .video-fallback {
+      background: #f8f0ff;
+      border-radius: 12px;
+      padding: 1.2em;
+      text-align: center;
+      max-width: 480px;
+      color: #8a5ebd;
+      font-weight: 500;
+      border: 1px dashed #c96ccd;
+    }
+
+    /* ===== NAVEGACIÓN ===== */
+    nav {
+      margin-top: 2.5em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(120deg, #ff758f, #c96ccd, #8a5ebd);
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(138, 94, 189, 0.2);
+    }
+
+    nav a:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(201, 108, 205, 0.4);
+    }
+
+    /* ===== PIE DE VIDEO ===== */
+    .video-caption {
+      margin-top: 0.8em;
+      text-align: center;
+      font-size: 1.05rem;
+      color: #8a5ebd;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img 
+      src="https://recursosinteligenciaartificial.com/wp-content/uploads/2024/02/Gemini-Logo-768x432.png" 
+      alt="Logo de Gemini" 
+      class="logo"
+      loading="lazy"
+    >
+
+    <nav>
+      <a href="gemini.html" target="_blank" rel="noopener">✨ Modelos de Gemini</a>
+      <a href="index.html" target="_blank" rel="noopener">🏡 Página principal</a>
+    </nav>
+
+    <h1>Domina tus estudios con Gemini</h1>
+    <p>
+      <strong>Gemini</strong>, la inteligencia artificial de Google, revoluciona la forma en que adquieres conocimientos. Te permite indagar, redactar, estructurar conceptos y dominar contenidos exigentes — todo con claridad, rapidez y adaptado a tus necesidades.
+    </p>
+
+    <div class="img-row">
+      <img 
+        src="EstudiosGE1.webp" 
+        alt="Joven estudiando con computadora y apoyo de IA"
+        loading="lazy"
+      >
+      <img 
+        src="EstudiosGE2.webp" 
+        alt="Cuaderno digital inteligente con asistente de IA"
+        loading="lazy"
+      >
+      <img 
+        src="EstudiosGE3.webp" 
+        alt="Grupo estudiantil colaborando con herramientas de IA"
+        loading="lazy"
+      >
+    </div>
+
+    <h2>Beneficios de Gemini para tu formación académica</h2>
+    <ul>
+      <li><strong>Investigación ágil:</strong> Localiza y sintetiza fuentes fiables en segundos.</li>
+      <li><strong>Mejora de textos:</strong> Refina tus trabajos con correcciones de estilo, coherencia y gramática.</li>
+      <li><strong>Compatibilidad con Notebook LM:</strong> Accede a asesoría en vivo desde tus libretas digitales.</li>
+      <li><strong>Ritmo personalizado:</strong> Ajusta la profundidad y velocidad de las explicaciones según tu nivel.</li>
+      <li><strong>Apoyo en ciencias exactas:</strong> Descompone ecuaciones, fórmulas y teorías en pasos comprensibles.</li>
+    </ul>
+
+    <h2>Experiencia fluida con Notebook LM</h2>
+    <p>
+      Conecta Gemini a plataformas como Google Colab o Jupyter Notebook y obtén ayuda contextual al instante: resume lecturas, diseña esquemas visuales, propone ejemplos prácticos y te guía durante todo el proceso de aprendizaje — sin cambiar de pestaña ni interrumpir tu flujo.
+    </p>
+
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/qRhZdtawyIs?rel=0" 
+        title="Google Notebook LM | Herramienta de IA para educación"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+      <p class="video-caption">
+        🌟 Google Notebook LM | Una solución innovadora 🎓 para docentes y alumnos
+      </p>
+      <noscript>
+        <div class="video-fallback">
+          ⚠️ Activa JavaScript para visualizar el contenido multimedia.
+        </div>
+      </noscript>
+    </div>
+
+    <h2>Dale el primer paso ahora</h2>
+    <p>
+      Impulsa tu proceso educativo con Gemini: prepárate para exámenes, desarrolla proyectos creativos o explora nuevos campos del saber. Tienes un tutor inteligente, disponible las 24 horas, listo para acompañarte.
+    </p>
+
+    <nav>
+      <a href="index.html" target="_blank" rel="noopener">🏡 Inicio</a>
+      <a href="gemini.html" target="_blank" rel="noopener">✨ Familia de modelos</a>
+      <a href="chatgpt2.html" target="_blank" rel="noopener">🤖 ChatGPT</a>
+      <a href="chatgpt3.html" target="_blank" rel="noopener">💡 Ideas para prompts</a>
+      <a href="claude.html" target="_blank" rel="noopener">🧠 Claude</a>
+      <a href="qwen.html" target="_blank" rel="noopener">🐼 Qwen</a>
+    
+    </nav>
+  </div>
+</body>
+</html>

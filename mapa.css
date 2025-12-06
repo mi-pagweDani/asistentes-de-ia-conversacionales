@@ -1,0 +1,73 @@
+/* Reset y estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  /* Fondo rosa-morado degradado */
+  background: linear-gradient(135deg, #f48fb1, #ce93d8);
+  color: #fff;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px #fff, 0 0 20px #f8bbd0;
+}
+
+/* Contenedor del mapa con efecto neón animado */
+.map-container {
+  width: 100%;
+  max-width: 900px;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #000;
+  box-shadow: 0 0 30px #f48fb1, 0 0 60px #ce93d8, 0 0 90px #ba68c8, 0 0 120px #ff80ab;
+  animation: neonPulse 3s ease-in-out infinite alternate;
+}
+
+/* Animación neón pulsante */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 20px #f48fb1, 0 0 40px #ce93d8, 0 0 60px #ba68c8, 0 0 80px #ff80ab;
+  }
+  50% {
+    box-shadow: 0 0 40px #f48fb1, 0 0 80px #ce93d8, 0 0 120px #ba68c8, 0 0 160px #ff80ab;
+  }
+  100% {
+    box-shadow: 0 0 20px #f48fb1, 0 0 40px #ce93d8, 0 0 60px #ba68c8, 0 0 80px #ff80ab;
+  }
+}
+
+/* iframe */
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}

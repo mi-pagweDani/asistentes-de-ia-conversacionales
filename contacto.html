@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción - Cursos IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <!-- Fondo estrellado rosa-morado -->
+    <div class="floating-stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Inscripción a Cursos</h1>
+            <p>Completa el formulario para acceder a nuestros cursos de IA</p>
+        </div>
+
+        <form id="courseForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Nombre Completo</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Ingresa tu nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="career" class="form-label">Carrera</label>
+                    <input type="text" id="career" name="career" class="form-input" placeholder="Ingresa tu carrera" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone" class="form-label">Número de Celular</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Ej: 55 23456672s" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="ejemplo@estudiante.uacm.edu.mx" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">¿Cuál de los siguientes cursos te interesa?</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="prompts" name="course" value="prompts" required>
+                        <label for="prompts">Redacción de prompts y usos prácticos para IA</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="python-ai" name="course" value="python-ai" required>
+                        <label for="python-ai">Inteligencia Artificial con Python</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="machine-learning" name="course" value="machine-learning" required>
+                        <label for="machine-learning">Machine Learning</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="neural-networks" name="course" value="neural-networks" required>
+                        <label for="neural-networks">Redes Neuronales</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments" class="form-label">Dudas o Comentarios</label>
+                <textarea id="comments" name="comments" class="textarea" placeholder="Escribe aquí tus dudas o comentarios..." rows="5"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">Borrar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function clearForm() {
+            document.getElementById('courseForm').reset();
+            const container = document.querySelector('.container');
+            container.style.transform = 'scale(0.98)';
+            setTimeout(() => container.style.transform = 'scale(1)', 150);
+        }
+
+        document.getElementById('courseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) data[key] = value;
+            
+            const submitBtn = document.querySelector('.btn-primary');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = '¡Enviado!';
+            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = 'linear-gradient(135deg, #f48fb1, #ce93d8)';
+                alert(
+                    `¡Formulario enviado exitosamente!\n\nDatos registrados:\n` +
+                    `Nombre: ${data.fullName}\n` +
+                    `Carrera: ${data.career}\n` +
+                    `Teléfono: ${data.phone}\n` +
+                    `Email: ${data.email}\n` +
+                    `Curso: ${data.course}\n` +
+                    `Comentarios: ${data.comments || 'Ninguno'}`
+                );
+            }, 1500);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const formGroups = document.querySelectorAll('.form-group');
+            formGroups.forEach((group, index) => {
+                group.style.opacity = '0';
+                group.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    group.style.transition = 'all 0.6s ease';
+                    group.style.opacity = '1';
+                    group.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        document.querySelectorAll('.form-input, .textarea').forEach(input => {
+            input.addEventListener('focus', function() { this.parentElement.style.transform = 'translateX(4px)'; });
+            input.addEventListener('blur', function() { this.parentElement.style.transform = 'translateX(0)'; });
+        });
+    </script>
+</body>
+</html>

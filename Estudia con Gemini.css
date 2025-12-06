@@ -1,0 +1,146 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  /* ✅ Gradiente rosa-morado suave y dinámico */
+  background: linear-gradient(120deg, #ff758f, #c96ccd, #8a5ebd, #5a4aa7);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 60px auto;
+  background: rgba(255, 248, 252, 0.92); /* ✅ Fondo rosa muy claro */
+  color: #333;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(90, 74, 167, 0.25); /* ✅ Sombra morada suave */
+  padding: 40px 32px;
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+  border: 1px solid rgba(201, 108, 205, 0.2);
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(138, 94, 189, 0.2); /* ✅ Sombra morada */
+  color: #5a4aa7; /* ✅ Morado oscuro elegante */
+}
+
+h2 {
+  color: #c96ccd; /* ✅ Rosa-morado vibrante */
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, #ff758f, #c96ccd);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* ===== TEXTO ===== */
+p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+ul {
+  margin-left: 1.5em;
+  font-size: 1.08rem;
+  color: #555;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  width: 60px;
+  margin-bottom: 1.5em;
+  filter: drop-shadow(0 2px 8px rgba(201, 108, 205, 0.4));
+}
+
+/* ===== FILA DE IMÁGENES ===== */
+.img-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 2em 0 1.5em;
+  flex-wrap: wrap;
+}
+
+.img-row img {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(138, 94, 189, 0.25); /* ✅ Sombra morada */
+  width: 210px;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.img-row img:hover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 6px 20px rgba(255, 117, 143, 0.4);
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container iframe {
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(138, 94, 189, 0.3);
+  width: 100%;
+  max-width: 480px;
+  height: 270px;
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav {
+  margin-top: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  /* ✅ Gradiente rosa-morado */
+  background: linear-gradient(120deg, #ff758f, #c96ccd, #8a5ebd);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(138, 94, 189, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+nav a:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(201, 108, 205, 0.4);
+}
+
+/* Para evitar parpadeo, no cambiamos el gradiente en hover — ya está optimizado */

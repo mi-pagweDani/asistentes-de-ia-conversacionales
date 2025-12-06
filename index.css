@@ -1,0 +1,116 @@
+/* ===== Reset y fuentes ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8bbd0, #ce93d8);
+    color: #4a148c;
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f06292, #8e24aa);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; margin-bottom: 0.5rem; }
+header h3 { font-weight: 400; font-size: 1.2rem; }
+
+/* ===== Contenedor de Tarjetas ===== */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* ===== Tarjetas ===== */
+.tarjeta {
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+/* ===== Imagen con borde degradado animado ===== */
+.tarjeta img {
+    width: 100%;
+    display: block;
+    border: 5px solid transparent;
+    border-radius: 10px 10px 0 0;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #f48fb1, #ab47bc, #f06292, #8e24aa);
+    transition: all 0.5s ease;
+}
+
+.tarjeta:hover img {
+    filter: brightness(1.1);
+    border-image: linear-gradient(135deg, #f48fb1, #ab47bc, #f06292, #8e24aa) 1;
+}
+
+/* ===== Títulos y párrafos ===== */
+.tarjeta h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.tarjeta p {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Gradientes individuales de tarjetas */
+.tarjeta:nth-child(1) { background: linear-gradient(135deg, #f48fb1, #ab47bc); }
+.tarjeta:nth-child(2) { background: linear-gradient(135deg, #f06292, #9c27b0); }
+.tarjeta:nth-child(3) { background: linear-gradient(135deg, #ec407a, #8e24aa); }
+.tarjeta:nth-child(4) { background: linear-gradient(135deg, #e91e63, #7b1fa2); }
+
+/* ===== Footer ===== */
+footer {
+    background: #8e24aa;
+    color: white;
+    padding: 1.5rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-left, .social-right { display: flex; gap: 1rem; }
+
+.social-icon {
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icon:hover { color: #f48fb1; transform: scale(1.2); }
+
+.footer-info h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; }
+.footer-info h4 { font-weight: 300; font-size: 0.9rem; }
+
+/* ===== Responsive ===== */
+@media(max-width: 768px){
+    .footer-container { flex-direction: column; text-align: center; }
+    .social-left, .social-right { justify-content: center; }
+}

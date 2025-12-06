@@ -1,0 +1,196 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  /* Gradiente rosa-morado suave y vibrante */
+  background: linear-gradient(120deg, #ff758f, #c96ccd, #8a5ebd, #5a4aa7);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 60px auto;
+  /* Fondo blanco suave con toque rosado/morado translúcido */
+  background: rgba(255, 250, 255, 0.92); /* Off-white cálido */
+  color: #333;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(90, 74, 167, 0.2); /* Sombra morada suave */
+  padding: 40px 32px;
+  backdrop-filter: blur(6px); /* Suavizado mejorado */
+  box-sizing: border-box;
+  border: 1px solid rgba(201, 108, 205, 0.2); /* Borde sutil rosa-morado */
+}
+
+/* ===== TÍTULOS Y TEXTO ===== */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  /* Sombra suave morada/rosada */
+  text-shadow: 0 2px 8px rgba(138, 94, 189, 0.2);
+  color: #5a4aa7; /* Morado oscuro elegante */
+}
+
+h2 {
+  /* Rosa-morado vibrante pero legible */
+  color: #c96ccd;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #ff758f, #c96ccd);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+h3 {
+  color: #8a5ebd;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1em;
+  color: #444;
+}
+
+ul {
+  margin-left: 1.5em;
+  font-size: 1.08rem;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  width: 60px;
+  margin-bottom: 1.5em;
+  filter: drop-shadow(0 2px 8px rgba(201, 108, 205, 0.4));
+}
+
+/* ===== FILA DE IMÁGENES ===== */
+.img-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 2em 0 1.5em;
+  flex-wrap: wrap;
+}
+
+.img-row img {
+  border-radius: 12px;
+  /* Sombra con tono rosa/morado */
+  box-shadow: 0 4px 16px rgba(138, 94, 189, 0.25);
+  width: 320px;
+  height: 213px;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.img-row img:hover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 6px 20px rgba(255, 117, 143, 0.4);
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container iframe {
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(138, 94, 189, 0.3);
+  width: 100%;
+  max-width: 640px;
+  height: 360px;
+}
+
+/* ===== NAVIGACIÓN ===== */
+nav {
+  margin-top: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  /* Gradiente rosa-morado suave */
+  background: linear-gradient(120deg, #ff758f, #c96ccd, #8a5ebd);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(138, 94, 189, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(120deg, #ff9aa2, #d486e0, #a779e9);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+nav a:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 4px 14px rgba(201, 108, 205, 0.4);
+}
+
+nav a:hover::before {
+  opacity: 1;
+}
+
+/* ===== TARJETAS DE MODELOS ===== */
+.model-card {
+  background: rgba(255, 248, 252, 0.85); /* Rosa muy claro */
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(201, 108, 205, 0.12);
+  padding: 24px 20px;
+  margin: 1.5em 0;
+  color: #333;
+  border-left: 4px solid #c96ccd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.model-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(138, 94, 189, 0.18);
+}
+
+.model-card h3 {
+  color: #8a5ebd;
+}
+
+.model-card ul {
+  margin: 0.5em 0 0 1.2em;
+  color: #555;
+}

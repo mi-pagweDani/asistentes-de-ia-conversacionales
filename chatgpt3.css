@@ -1,0 +1,296 @@
+/* Estilos Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f2fb; /* Fondo suave en tonos pastel */
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Header */
+.main-header {
+  background: linear-gradient(135deg, #9b59b6, #f39c12); /* Gradiente morado-rosado */
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ecf0f1;
+}
+
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  font-size: 1rem;
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #e74c3c; /* Cambio de color a rojo suave */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #e74c3c, #9b59b6); /* Gradiente rosa-morado */
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c0392b; /* Rojo más oscuro */
+}
+
+/* Galería de Prompts */
+.prompts-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.prompt-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #9b59b6; /* Título morado */
+}
+
+.prompt-card__desc {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+}
+
+.prompt-card__example-container {
+  font-size: 1rem;
+  color: #e74c3c; /* Rosa suave */
+}
+
+.prompt-card__example-text {
+  font-family: 'Courier New', Courier, monospace;
+  color: #34495e;
+  font-size: 1.1rem;
+  padding: 0.3rem 0;
+  display: block;
+  border-left: 3px solid #9b59b6; /* Línea morada */
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+/* Ejemplos de Prompts */
+.examples-section {
+  padding: 3rem 1rem;
+  background-color: #ecf0f1;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #9b59b6; /* Morado para el título */
+}
+
+.examples-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.example-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.example-item__title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #9b59b6; /* Morado */
+}
+
+.example-item__title + div {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.example-item em {
+  color: #e74c3c; /* Rosa suave */
+}
+
+/* Testimonios */
+.testimonials {
+  background-color: #9b59b6; /* Fondo morado */
+  color: white;
+  padding: 3rem 1rem;
+}
+
+.testimonials__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: #8e44ad; /* Morado más oscuro */
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial__text {
+  font-size: 1.1rem;
+  color: #ecf0f1;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial__author {
+  font-size: 1rem;
+  color: #f39c12; /* Color dorado para los nombres */
+  font-weight: 600;
+}
+
+/* Video Section */
+.video-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.video-container {
+  margin-bottom: 1.5rem;
+}
+
+.video-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+iframe {
+  border-radius: 8px;
+}
+
+/* Gráfica de Popularidad */
+.performance {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #ecf0f1;
+}
+
+.performance__metrics {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-top: 2rem;
+}
+
+canvas {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #9b59b6; /* Morado para el pie */
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer__back {
+  color: #ecf0f1;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer__back:hover {
+  color: #e74c3c; /* Rosa al pasar el cursor */
+}
